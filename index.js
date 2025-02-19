@@ -20,3 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 });
+
+
+function onLikeClick() {
+    let span = document.getElementById("likes-count");
+    let likes = parseInt(span.textContent);
+    likes++;
+    span.textContent = likes;
+}
+
