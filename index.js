@@ -27,5 +27,22 @@ function onLikeClick() {
     let likes = parseInt(span.textContent);
     likes++;
     span.textContent = likes;
+    // draw a thumb up for every like:
+    const imgHtml =
+    '<img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Emoji_u1f44d.svg" alt="like" height="25">';
+    let insertHtml = "";
+
+    for (let i = 0; i < likes; i++) {
+    insertHtml += imgHtml;
+    }
+
+    const messageDiv = document.querySelector("div#message-div");
+    messageDiv.innerHTML = insertHtml;
 }
 
+function onAddClick() {
+    var container = document.getElementById("container");
+    var newElement = document.createElement("p");
+    newElement.textContent = "New Element";
+    container.appendChild(newElement);
+}
