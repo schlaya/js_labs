@@ -25,3 +25,7 @@ const darkMode = () => {
     element.classList.toggle("darkMode");
 }
 
+const input = () => {
+    var x = document.getElementById("myText").value;
+    document.getElementById("lengthOfInput").innerHTML = x.length;
+}
